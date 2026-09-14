@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Daily Trend Report — 2026-09-14</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --border: #2a2e38;
+    --text: #e8eaed;
+    --muted: #8b909c;
+    --accent: #ff4d67;
+    --accent2: #4d7fff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 24px;
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+  h2 { font-size: 18px; margin: 40px 0 16px; border-left: 3px solid var(--accent); padding-left: 10px; }
+  table { width: 100%; border-collapse: collapse; background: var(--card);
+           border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  th, td { padding: 10px 12px; text-align: left; font-size: 13px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; text-transform: uppercase; font-size: 11px; letter-spacing: 0.04em; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #1d212b; }
+  .rank { color: var(--muted); font-weight: 700; width: 24px; }
+  .title a { color: var(--text); text-decoration: none; font-weight: 600; }
+  .title a:hover { color: var(--accent2); }
+  .channel { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .empty-note { color: var(--muted); font-size: 14px; }
+  .stat-row { display: flex; gap: 16px; margin-bottom: 8px; flex-wrap: wrap; }
+  .stat { background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+           padding: 14px 18px; min-width: 140px; }
+  .stat .num { font-size: 22px; font-weight: 700; }
+  .stat .label { color: var(--muted); font-size: 12px; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Daily Trend Report</h1>
+  <div class="subtitle">Generated 2026-09-14 09:38 UTC · Ranked by views/hour (velocity), not raw views</div>
+
+  <div class="stat-row">
+    <div class="stat"><div class="num">2</div><div class="label">YouTube Shorts tracked</div></div>
+    <div class="stat"><div class="num">29,543.9</div><div class="label">Top velocity (views/hr)</div></div>
+    <div class="stat"><div class="num">0</div><div class="label">Instagram Reels tracked</div></div>
+  </div>
+
+  <h2>YouTube Shorts — Top 2</h2>
+  <table>
+    <thead><tr><th>#</th><th>Short</th><th>Views</th><th>Velocity</th><th>Likes</th>
+    <th>Comments</th><th>Eng. Rate</th><th>Age</th><th>Subscribers</th></tr></thead>
+    <tbody>
+            <tr>
+              <td class="rank">1</td>
+              <td class="title"><a href="https://youtube.com/shorts/abc123" target="_blank">This cafe hack will save you 500rs a month</a>
+                  <div class="channel">BudgetBites</div></td>
+              <td>842,000</td>
+              <td>29,543.9/hr</td>
+              <td>61,000</td>
+              <td>2,100</td>
+              <td>7.48%</td>
+              <td>28.5h</td>
+              <td>182,000</td>
+            </tr>
+            <tr>
+              <td class="rank">2</td>
+              <td class="title"><a href="https://youtube.com/shorts/def456" target="_blank">POV: your barista remembers your order</a>
+                  <div class="channel">CoffeeDaily</div></td>
+              <td>112,000</td>
+              <td>18,064.5/hr</td>
+              <td>15,000</td>
+              <td>420</td>
+              <td>13.77%</td>
+              <td>6.2h</td>
+              <td>54,000</td>
+            </tr></tbody>
+  </table>
+
+  
+        <h2>Instagram Reels</h2>
+        <p class="empty-note">Not configured yet — see instagram_module.py to plug in a data source.</p>
+        
+</div>
+</body>
+</html>
