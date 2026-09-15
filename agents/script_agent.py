@@ -79,8 +79,21 @@ def generate_script(topic: str, niche: str = "general / trending",
     response = client.models.generate_content(
         model=DEFAULT_MODEL,
         contents=prompt,
-        config=types.GenerateContentConfig(temperature=0.9, max_output_tokens=1024),
+        config=types.GenerateContentConfig(
+            temperature=0.9,
+            max_output_tokens=2048,
+            response_mime_type="application/json",
+            thinking_config=types.ThinkingConfig(thinking_budget=0),
+        ),
     )
+    if not response.text:
+        finish_reason = None
+        if response.candidates:
+            finish_reason = response.candidates[0].finish_reason
+        raise RuntimeError(
+            f"Gemini returned no text (finish_reason={finish_reason}). "
+            "If this says MAX_TOKENS, raise max_output_tokens in script_agent.py."
+        )
     data = _extract_json(response.text)
 
     required = {"title", "hook", "body", "cta", "on_screen_title", "visual_keywords"}
