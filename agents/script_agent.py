@@ -20,7 +20,7 @@ import re
 from google import genai
 from google.genai import types
 
-DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
 
 PROMPT_TEMPLATE = """You are a scriptwriter for a viral, faceless YouTube Shorts channel.
 
