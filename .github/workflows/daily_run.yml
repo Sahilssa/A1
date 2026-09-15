@@ -35,6 +35,7 @@ jobs:
         run: |
           git config user.name "trend-tracker-bot"
           git config user.email "actions@github.com"
+          mkdir -p output data
           git add output/ data/
           git diff --quiet --cached || git commit -m "Daily trend report $(date -u +%Y-%m-%d)"
           git push

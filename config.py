@@ -10,11 +10,16 @@ Nothing here is a secret — API keys/passwords go in environment variables
 # Country to bias/region-restrict results (ISO 3166-1 alpha-2).
 REGION_CODE = "IN"
 
-# Keywords/niches to search for. Leave as [""] to just look at broad
-# "most viewed short-form video published recently" with no topic filter.
-# Add your niches here, e.g. ["cafe", "coffee shop", "gym workout", "salon"]
+# Keywords/niches to search for. IMPORTANT: YouTube's search API only
+# returns solid results with a real keyword — an empty/broad "no filter"
+# mode is unreliable (confirmed: it returns ~0 results in practice), so
+# always keep at least a few real terms here. Mix broad + niche terms.
 KEYWORDS = [
-    "",  # broad/no filter — remove this line if you only want niche results
+    "viral shorts",
+    "trending video",
+    "cafe",
+    "coffee shop",
+    "restaurant reels",
 ]
 
 # How far back to look for "recently published" candidates (hours).
